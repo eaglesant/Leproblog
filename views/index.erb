@@ -1,1 +1,11 @@
 <h2>Latest posts:</h2>
+
+<% @results.each do |post| %>
+<p style="font-style: oblique">
+<%= post['content'] %>
+</p><p style="font-style: italic;">
+Added at: <%= post['created_date'] %>
+</p>
+<hr>
+
+<% end %>
