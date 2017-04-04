@@ -25,7 +25,8 @@ configure do
 	(
 	id           INTEGER PRIMARY KEY AUTOINCREMENT,
 	created_date DATE,
-	content      TEXT
+	content      TEXT,
+	post_id 	 INTEGER
 	)'
 end
 
