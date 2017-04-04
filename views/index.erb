@@ -4,7 +4,11 @@
 <p style="font-style: oblique">
 <%= post['content'] %>
 </p>
-<p style="font-style: italic; display: block; width: 220px; border-top: 1px solid black; ">
+
+<p>
+Author:  <span style="font-weight: bold; color: #064E73;"><%= post['author'] %></span>
+</p>
+<p style="font-style: italic; display: block; width: 220px; border-top: 1px solid black;font-size: 0.9em; color: #9C9FA0; padding-top: 7px; ">
 Added at: <%= post['created_date'] %>
 </p>
 <p><a href="/post/<%= post['id'] %>">Comments</a></p>
