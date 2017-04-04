@@ -50,3 +50,9 @@ get '/post/:post_id' do
 
 	erb :details
 end
+post '/post/:post_id' do
+	post_id = params[:post_id]
+	@comment = params[:comment]
+
+	erb "You typed comment #{@comment} for post #{post_id}"
+end

@@ -5,3 +5,12 @@
 <p style="font-style: italic; display: block; width: 220px; border-top: 1px solid black; ">
 Added at: <%= @result['created_date'] %>
 </p>
+<hr>
+<h5>Comments:</h5>
+<form action="/post/<%= @result['id'] %>" method="POST">
+<div class="form-group">
+	<textarea style="width: 500px;" name="comment" class="form-control" rows="3" placeholder="Type comment text here"></textarea>
+</div>
+	
+	<button type="submit" class="btn btn-primary">Add comment</button>
+</form>
