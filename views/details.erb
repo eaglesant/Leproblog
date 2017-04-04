@@ -6,11 +6,23 @@
 Added at: <%= @result['created_date'] %>
 </p>
 <hr>
-<h5>Comments:</h5>
+<h4>Comments:</h4>
+
+<% @comments.each do |comment| %>
+<p style="font-style: oblique">
+<%= comment['content'] %>
+</p>
+<p style="font-style: italic; display: block; width: 220px; border-top: 1px solid black; ">
+Added at: <%= comment['created_date'] %>
+</p>
+<hr>
+
+<% end %>
+
 <form action="/post/<%= @result['id'] %>" method="POST">
 <div class="form-group">
 	<textarea style="width: 500px;" name="comment" class="form-control" rows="3" placeholder="Type comment text here"></textarea>
 </div>
-	
+
 	<button type="submit" class="btn btn-primary">Add comment</button>
 </form>
