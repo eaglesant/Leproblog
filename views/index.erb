@@ -3,9 +3,11 @@
 <% @results.each do |post| %>
 <p style="font-style: oblique">
 <%= post['content'] %>
-</p><p style="font-style: italic;">
+</p>
+<p style="font-style: italic; display: block; width: 220px; border-top: 1px solid black; ">
 Added at: <%= post['created_date'] %>
 </p>
+<p><a href="/post/<%= post['id'] %>">Comments</a></p>
 <hr>
 
 <% end %>
