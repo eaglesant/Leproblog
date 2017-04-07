@@ -22,6 +22,7 @@ Added at: <%= comment['created_date'] %>
 
 <% end %>
 
+
 <form action="/post/<%= @result['id'] %>" method="POST">
 <div class="form-group">
 	<textarea style="width: 500px;" name="comment" class="form-control" rows="3" placeholder="Type comment text here"></textarea>
